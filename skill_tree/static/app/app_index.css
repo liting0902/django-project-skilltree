@@ -1,0 +1,30 @@
+h2{ color:rgb(222, 135, 221)}
+h3{color:rgb(144, 190, 175)}
+h2, h3 {   
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+h2 a:hover{
+    color: rgb(185, 185, 185);
+}
+li {
+    list-style-type: circle;
+    color:white
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 137, 20);
+    font-size: 1.2em;
+}
+a:hover {
+    color: rgb(255, 203, 91);
+}
+body {
+    background-color: #2a2a2a;
+}
+.menu{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

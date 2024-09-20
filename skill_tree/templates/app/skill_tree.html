@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+<title>{% block page_title %}{{st_slug}}{% endblock %}</title>
+{% load static %}
+{% load compress static %}
+{% block css_file %}
+{% compress css %}
+<link type="text/css" rel="stylesheet" href="{% static 'app/jsmind.css' %}" />
+<style type="text/css">
+    #jsmind_container {
+        width: 100vw;
+        height: 100vh;
+        border: solid 1px #ccc;
+        /*background:#f4f4f4;*/
+        background: rgb(244, 243, 243);
+    }
+</style>
+{% endcompress %}
+{% endblock %}
+
+{% block content %}
+
+<div id="jsmind_container">
+
+</div>
+{% compress js %}
+<script type="text/javascript" src="{% static 'app/jsmind.js' %}"></script>
+<script type="text/javascript" src="{% static 'app/renderMidmap.js' %}"></script>
+{% endcompress %}
+{% endblock %}

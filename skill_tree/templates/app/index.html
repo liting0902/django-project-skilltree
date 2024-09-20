@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<title>{% block page_title %}App{% endblock %}</title>
+{% load static %}
+
+{% block css_file %}
+<link rel="stylesheet" href="{% static 'app/app_index.css' %}">
+{% endblock %}
+{% block content %}
+{% include './includes/header.html' %}
+<div class="menu">
+    <ul>
+        {% for project in projects %}
+        <li><a href="skill-tree?category={{project.project_slug}}">{{project.project_name|title}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
